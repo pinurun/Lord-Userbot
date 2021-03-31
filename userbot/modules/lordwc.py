@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Alfiananda P.A
+s# Copyright (C) 2020 Alfiananda P.A
 #
 # Licensed under the General Public License, Version 3.0;
 # you may not use this file except in compliance with the License.
@@ -21,11 +21,11 @@ from userbot.events import register
 @register(outgoing=True, pattern=r"^\.(wc)$")
 async def _(event):
     if not event.reply_to_msg_id:
-        await event.edit("`Mohon Balas Ke Media Apapun Lord`")
+        await event.edit("`Mohon Balas Ke Media Apapun`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.media:
-        await event.edit("`Mohon Balas Ke Gambar/Sticker/Video Lord`")
+        await event.edit("`Mohon Balas Ke Gambar/Sticker/Video`")
         return
     await event.edit("`Mendownload Media.....`")
     if reply_message.photo:

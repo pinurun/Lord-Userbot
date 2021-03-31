@@ -28,12 +28,12 @@ async def fastpurger(purg):
                 await purg.client.delete_messages(chat, msgs)
                 msgs = []
     else:
-        return await purg.edit("`Mohon Balas Ke Pesan Lord ツ `")
+        return await purg.edit("`Mohon Balas Ke Pesan`")
 
     if msgs:
         await purg.client.delete_messages(chat, msgs)
     done = await purg.client.send_message(
-        purg.chat_id, f"`Berhasil Menghapus Pesan Lord`\
+        purg.chat_id, f"`Berhasil Menghapus Pesan`\
         \nJumlah Pesan Yang Dihapus {str(count)} Pesan")
     """
     if BOTLOG:
@@ -59,7 +59,7 @@ async def purgeme(delme):
 
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "`Berhasil Menghapus Pesan Lord,` " + str(count) + " `Pesan Telah Dihapus ツ`",
+        "`Berhasil Menghapus Pesan,` " + str(count) + " `Pesan Telah Dihapus ツ`",
     )
     """
     if BOTLOG:

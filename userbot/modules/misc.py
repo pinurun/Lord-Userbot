@@ -65,41 +65,28 @@ async def sleepybot(time):
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Mematikan Lord-Userbot....`")
+    await event.edit("`Mematikan ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "`Lord-Userbot Telah Dimatikan`")
+                                        "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Telah Dimatikan`")
     await bot.disconnect()
 
 
 @register(outgoing=True, pattern="^.restart$")
 async def killdabot(event):
-    await event.edit("`Restarting Lord-Userbot...`")
+    await event.edit("`Restarting ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`Lord-Userbot Telah Di Restart`")
+                                        "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Telah Di Restart`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
     # Shut the existing one down
     exit()
-
-
-@register(outgoing=True, pattern="^.readme$")
-async def reedme(e):
-    await e.edit(
-        "Here's something for you to read:\n"
-        "\n[Lord-Userbot Repo](https://github.com/Zora24/Lord-Userbot/blob/Lord-Userbot/README.md)"
-        "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
-        "\n[Setup Guide - Google Drive](https://telegra.ph/How-To-Setup-GDrive-11-02)"
-        "\n[Setup Guide - LastFM Module](https://telegra.ph/How-to-set-up-LastFM-module-for-Paperplane-userbot-11-02)"
-        "\n[Video Tutorial - 576p](https://mega.nz/#!ErwCESbJ!1ZvYAKdTEfb6y1FnqqiLhHH9vZg4UB2QZNYL9fbQ9vs)"
-        "\n[Video Tutorial - 1080p](https://mega.nz/#!x3JVhYwR!u7Uj0nvD8_CyyARrdKrFqlZEBFTnSVEiqts36HBMr-o)"
-        "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
 
 @register(outgoing=True, pattern="^.repeat (.*)")
@@ -116,13 +103,6 @@ async def repeat(rep):
     await rep.edit(replyText)
 
 
-@register(outgoing=True, pattern="^.repo$")
-async def repo_is_here(wannasee):
-    """ For .repo command, just returns the repo URL. """
-    await wannasee.edit(
-        "❃ **Repo Userbot:** [Lord-Userbot](https://github.com/Zora24/Lord-Userbot)\n❃ **Pemilik:** [Alvin](t.me/liualvinas)"
-    )
-
 
 @register(outgoing=True, pattern="^.raw$")
 async def raw(event):
@@ -138,7 +118,7 @@ async def raw(event):
     with io.BytesIO(str.encode(the_real_message)) as out_file:
         out_file.name = "raw_message_data.txt"
         await event.edit(
-            "`Check the userbot log for the decoded message data !!`")
+            "`Check the ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ log for the decoded message data !!`")
         await event.client.send_file(
             BOTLOG_CHATID,
             out_file,
@@ -159,7 +139,7 @@ async def okgoogle(img):
         photo = io.BytesIO()
         await bot.download_media(message, photo)
     else:
-        await img.edit("`Harap Balas Di Gambar Lord`")
+        await img.edit("`Harap Balas Di Gambar`")
         return
 
     if photo:
@@ -281,7 +261,7 @@ CMD_HELP.update({
     \nUsage: Github Repo of this bot",
     "readme":
     ">`.readme`\
-    \nUsage: Provide links to setup the userbot and it's modules.",
+    \nUsage: Provide links to setup the ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ and it's modules.",
     "repeat":
     ">`.repeat <no> <text>`\
     \nUsage: Repeats the text for a number of times. Don't confuse this with spam tho.",

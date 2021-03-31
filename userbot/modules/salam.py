@@ -10,31 +10,33 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 @register(outgoing=True, pattern='^.P(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("Assalamu'alaikum")
+    await typew.edit("Shalom, Horas..\tSelamat Pagi")
 
 
-@register(outgoing=True, pattern='^.p(?: |$)(.*)')
+@register(outgoing=True, pattern='^.S(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("Assalamu'alaikum")
+    await typew.edit("Shalom, Horas..\tSelamat Siang")
 
 
-@register(outgoing=True, pattern='^.L(?: |$)(.*)')
+@register(outgoing=True, pattern='^.M(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("Wa'alaikumussalam")
+    await typew.edit("Shalom, Horas..\tSelamat Malam")
 
 
-@register(outgoing=True, pattern='^.l(?: |$)(.*)')
+@register(outgoing=True, pattern='^.B(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("Wa'alaikumussalam")
+    await typew.edit("Shalom, Horas..\t")
 
 
 CMD_HELP.update({
     "salam":
     "`.P`\
-\nUsage: Untuk Memberi salam.\
-\n\n`.L`\
-\nUsage: Untuk Menjawab Salam."
+\nUsage: Untuk Memberi salam Selamat Pagi.\
+\n`.S`\
+\nUsage: Untuk Memberi Salam Selamat Siang.\
+\n'.M'\
+\nUsage: Untuk Memberi Salam Selamat Malam"
 })

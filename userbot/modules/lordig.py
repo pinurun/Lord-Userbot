@@ -25,11 +25,11 @@ async def insta(event):
     if event.fwd_from:
         return
     if not event.reply_to_msg_id:
-        await event.edit("`Lord, Mohon Balas Ke Link`")
+        await event.edit("`Mohon Balas Ke Link`")
         return
     reply_message = await event.get_reply_message()
     if not reply_message.text:
-        await event.edit("`Mohon Maaf Lord, Saya Membutuhkan Link Media Instagram Untuk Download`")
+        await event.edit("`Mohon Maaf, Saya Membutuhkan Link Media Instagram Untuk Download`")
         return
     chat = "@SaveAsBot"
     reply_message.sender
@@ -45,7 +45,7 @@ async def insta(event):
             await event.client.send_message(chat, reply_message)
             response = await response
         except YouBlockedUserError:
-            await event.edit("`Lord, Mohon Buka Blokir` @SaveAsbot `Lalu Coba Lagi`")
+            await event.edit("`Mohon Buka Blokir` @SaveAsbot `Lalu Coba Lagi`")
             return
         if response.text.startswith("Forward"):
             await event.edit(
@@ -56,7 +56,7 @@ async def insta(event):
             await event.client.send_file(
                 event.chat_id,
                 response.message.media,
-                caption=f"**Download By @Lorduserbot_Group**",
+                caption=f"**Download By @pinurunautobot**",
             )
             await event.client.send_read_acknowledge(conv.chat_id)
             await bot(functions.messages.DeleteHistoryRequest(peer=chat, max_id=0))

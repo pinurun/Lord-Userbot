@@ -54,7 +54,7 @@ async def _(event):
         query = reply.message
         await event.edit("`Sedang Mencari Lagu Anda....`")
     else:
-        await event.edit("`Apa Yang Harus Saya Cari Lord?`")
+        await event.edit("`Apa Yang Harus Saya Cari?`")
         return
 
     getmusic(str(query), "320k")
@@ -67,7 +67,7 @@ async def _(event):
         if any(fn_img.endswith(ext_img) for ext_img in img_extensions)
     ]
     thumb_image = img_filenames[0]
-    await event.edit("`Sedang Mengunggah Lagu Anda Lord....`")
+    await event.edit("`Sedang Mengunggah Lagu Anda....`")
     c_time = time.time()
     await event.client.send_file(
         event.chat_id,
@@ -180,7 +180,7 @@ async def _(event):
         query = reply.message
         await event.edit("`Telah Mendapatkan Musik, Sedang Mengunggah.....ヅ`")
     else:
-        await event.edit("`Lord, Apa Yang Seharusnya Saya Temukan? ヅ`")
+        await event.edit("`Apa Yang Seharusnya Saya Temukan? ヅ`")
         return
 
     await getmusic(str(query))
@@ -241,7 +241,7 @@ async def _(event):
     try:
         async with bot.conversation(chat) as conv:
             await asyncio.sleep(2)
-            await event.edit("`Memproses... Mohon Menunggu Lord`")
+            await event.edit("`Memproses... Mohon Menunggu`")
             try:
                 msg = await conv.send_message(link)
                 response = await conv.get_response()
