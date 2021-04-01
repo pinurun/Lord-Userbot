@@ -53,7 +53,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
         if HEROKU_APP_NAME is None:
             await event.edit(
                 '`[HEROKU]: Harap Siapkan Variabel` **HEROKU_APP_NAME** `'
-                ' untuk dapat deploy perubahan terbaru dari ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ.`'
+                ' ᴜɴᴛᴜᴋ ᴅᴀᴘᴀᴛ ᴅᴇᴘʟᴏʏ ᴘᴇʀᴜʙᴀʜᴀɴ ᴛᴇʀʙᴀʀᴜ dari ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ.`'
             )
             repo.__del__()
             return
@@ -63,11 +63,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f'{txt}\n`Kredensial Heroku tidak valid untuk deploy ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ dyno.`'
+                f'{txt}\n`ᴋʀᴇᴅᴇɴꜱɪᴀʟ ʜᴇʀᴏᴋᴜ ᴛɪᴅᴀᴋ ᴠᴀʟɪᴅ ᴜɴᴛᴜᴋ ᴅᴇᴘʟᴏʏ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ᴅʏɴᴏ.`'
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nDyno ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Sedang Dalam Proses, Mohon Menunggu 7-8 Menit`'
+                         '\nᴅʏɴᴏ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ꜱᴇᴅᴀɴɢ ᴅᴀʟᴀᴍ ᴘʀᴏꜱᴇꜱ, ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ 7-8 ᴍᴇɴɪᴛ`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -91,14 +91,14 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Berhasil Di Deploy!\n" "Restarting, Mohon Menunggu.....`")
+            await event.edit("`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴅᴇᴘʟᴏʏ!\n" "ʀᴇꜱᴛᴀʀᴛɪɴɢ, ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ.....`")
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
                 BOTLOG_CHATID, "#BOT \n"
-                "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Berhasil Di Update`")
+                "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴜᴘᴅᴀᴛᴇ`")
 
     else:
         await event.edit('`[HEROKU]:'
@@ -115,18 +115,18 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**✥ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ** `Berhasil Di Update!`')
+    await event.edit('**✥ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ** `ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴜᴘᴅᴀᴛᴇ!`')
     await asyncio.sleep(1)
-    await event.edit('**✥ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ** `Di Restart....`')
+    await event.edit('**✥ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ** `ᴅɪ ʀᴇꜱᴛᴀʀᴛ....`')
     await asyncio.sleep(1)
-    await event.edit('`Mohon Menunggu Beberapa Detik.`')
+    await event.edit('`ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ ʙᴇʙᴇʀᴀᴘᴀ ᴅᴇᴛɪᴋ.`')
     await asyncio.sleep(10)
     await event.delete()
 
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#BOT \n"
-            "**ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Telah Di Perbarui ツ**")
+            BOTLOG_CHATID, "#pinurun \n"
+            "**ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ᴛᴇʟᴀʜ ᴅɪ ᴘᴇʀʙᴀʀᴜɪ**")
         await asyncio.sleep(100)
         await event.delete()
 
@@ -139,7 +139,7 @@ async def update(event, repo, ups_rem, ac_br):
 @ register(outgoing=True, pattern=r"^.update(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
-    await event.edit("`Mengecek Pembaruan, Silakan Menunggu....`")
+    await event.edit("`ᴍᴇɴɢᴇᴄᴇᴋ ᴘᴇᴍʙᴀʀᴜᴀɴ, ꜱɪʟᴀᴋᴀɴ ᴍᴇɴᴜɴɢɢᴜ....`")
     conf = event.pattern_match.group(1)
     off_repo = UPSTREAM_REPO_URL
     force_update = False
@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**✣ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Sudah Versi Terbaru**\n')
+            f'\n**✣ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ꜱᴜᴅᴀʜ ᴠᴇʀꜱɪ ᴛᴇʀʙᴀʀᴜ**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ Pembaruan Untuk ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ \t[ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ]:\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**✣ ᴘᴇᴍʙᴀʀᴜᴀɴ ᴜɴᴛᴜᴋ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ \t[ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ]:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -208,7 +208,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**Perintah Untuk Update ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ**\n >`.update now`\n >`.update deploy`\n\n__Untuk Meng Update Fitur Terbaru Dari ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ.__')
+        return await event.respond('**ᴘᴇʀɪɴᴛᴀʜ ᴜɴᴛᴜᴋ ᴜᴘᴅᴀᴛᴇ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ**\n >`.update now`\n >`.update deploy`\n\n__ᴜɴᴛᴜᴋ ᴍᴇɴɢ ᴜᴘᴅᴀᴛᴇ ꜰɪᴛᴜʀ ᴛᴇʀʙᴀʀᴜ ᴅᴀʀɪ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ.__')
 
     if force_update:
         await event.edit(
@@ -234,9 +234,9 @@ async def upstream(event):
 CMD_HELP.update({
     'update':
     ".update"
-    "\nUsage: Untuk Melihat Pembaruan Terbaru ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ."
+    "\nUsage: ᴜɴᴛᴜᴋ ᴍᴇɴɢ ᴜᴘᴅᴀᴛᴇ ꜰɪᴛᴜʀ ᴛᴇʀʙᴀʀᴜ ᴅᴀʀɪ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ."
     "\n\n.update now"
     "\nUsage: Memperbarui ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ."
     "\n\n.update deploy"
-    "\nUsage: Memperbarui ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Dengan Cara Deploy Ulang."
+    "\nUsage: Memperbarui ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ᴅᴇɴɢᴀɴ ᴄᴀʀᴀ ᴅᴇᴘʟᴏʏ ᴜʟᴀɴɢ."
 })
