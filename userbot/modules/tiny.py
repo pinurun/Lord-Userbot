@@ -3,9 +3,6 @@
 # Fixed By ManusiaRakitann/Koala
 # Dont Remove
 
-
-# Alvin Ganteng
-
 from PIL import Image
 import cv2
 import os
@@ -23,7 +20,7 @@ async def ultiny(event):
         return
     xx = await event.edit("`Memproses Tiny....`")
     ik = await bot.download_media(reply)
-    im1 = Image.open("ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ/ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ.png")
+    im1 = Image.open("LordUserbot/lorduserbot.png")
     if ik.endswith(".tgs"):
         await event.client.download_media(reply, "ult.tgs")
         os.system("lottie_convert.py ult.tgs json.json")
@@ -86,9 +83,6 @@ async def ultiny(event):
     await xx.delete()
     os.remove(file)
     os.remove(ik)
-
-# Port By Alvin Ganteng/liualvinas
-# Lord - Userbot
 
 CMD_HELP.update({"tiny": "`.tiny`\
     \nPenjelasan: Untuk Memperkecil Sticker."})
