@@ -65,12 +65,12 @@ async def sleepybot(time):
 @register(outgoing=True, pattern="^.shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await event.edit("`Mematikan ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ....`")
+    await event.edit("`ᴍᴀᴛɪᴋᴀɴ ᴘɪɴᴜʀᴜɴ....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(BOTLOG_CHATID, "#SHUTDOWN \n"
-                                        "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Telah Dimatikan`")
+                                        "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ᴛᴇʟᴀʜ ᴅɪᴍᴀᴛɪᴋᴀɴ`")
     await bot.disconnect()
 
 
@@ -80,8 +80,8 @@ async def killdabot(event):
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
-        await event.client.send_message(BOTLOG_CHATID, "#RESTARTBOT \n"
-                                        "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ Telah Di Restart`")
+        await event.client.send_message(BOTLOG_CHATID, "#RESTART \n"
+                                        "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ᴛᴇʟᴀʜ ᴅɪᴍᴜᴀᴛ ᴜʟᴀɴɢ`")
     await bot.disconnect()
     # Spin a new instance of bot
     execl(sys.executable, sys.executable, *sys.argv)
