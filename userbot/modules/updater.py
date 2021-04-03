@@ -63,11 +63,11 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
                 break
         if heroku_app is None:
             await event.edit(
-                f'{txt}\n`ᴋʀᴇᴅᴇɴꜱɪᴀʟ ʜᴇʀᴏᴋᴜ ᴛɪᴅᴀᴋ ᴠᴀʟɪᴅ ᴜɴᴛᴜᴋ ᴅᴇᴘʟᴏʏ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ᴅʏɴᴏ.`'
+                f'{txt}\n`ᴋʀᴇᴅᴇɴꜱɪᴀʟ ʜᴇʀᴏᴋᴜ ᴛɪᴅᴀᴋ ᴠᴀʟɪᴅ ᴜɴᴛᴜᴋ ᴅᴇᴘʟᴏʏ ᴘɪɴᴜʀᴜɴ.`'
             )
             return repo.__del__()
         await event.edit('`[HEROKU]:'
-                         '\nᴅʏɴᴏ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ꜱᴇᴅᴀɴɢ ᴅᴀʟᴀᴍ ᴘʀᴏꜱᴇꜱ, ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ 7-8 ᴍᴇɴɪᴛ`'
+                         '\nᴅʏɴᴏ ᴘɪɴᴜʀᴜɴ ꜱᴇᴅᴀɴɢ ᴅᴀʟᴀᴍ ᴘʀᴏꜱᴇꜱ, ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ 7-8 ᴍᴇɴɪᴛ`'
                          )
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
@@ -91,14 +91,14 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             await asyncio.sleep(5)
             return await event.delete()
         else:
-            await event.edit("`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴅᴇᴘʟᴏʏ!\n" "ʀᴇꜱᴛᴀʀᴛɪɴɢ, ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ.....`")
+            await event.edit("`ᴘɪɴᴜʀᴜɴ ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴅᴇᴘʟᴏʏ!\n" "ʀᴇꜱᴛᴀʀᴛɪɴɢ, ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ.....`")
             await asyncio.sleep(15)
             await event.delete()
 
         if BOTLOG:
             await event.client.send_message(
-                BOTLOG_CHATID, "#BOT \n"
-                "`ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴜᴘᴅᴀᴛᴇ`")
+                BOTLOG_CHATID, "#update \n"
+                "`ᴘɪɴᴜʀᴜɴ ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴜᴘᴅᴀᴛᴇ`")
 
     else:
         await event.edit('`[HEROKU]:'
@@ -115,9 +115,9 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await event.edit('**✥ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ** `ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴜᴘᴅᴀᴛᴇ!`')
+    await event.edit('**🔥 ᴘɪɴᴜʀᴜɴ** `ʙᴇʀʜᴀꜱɪʟ ᴅɪ ᴜᴘᴅᴀᴛᴇ!`')
     await asyncio.sleep(1)
-    await event.edit('**✥ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ** `ᴅɪ ʀᴇꜱᴛᴀʀᴛ....`')
+    await event.edit('**🔥 ᴘɪɴᴜʀᴜɴ** `ᴅɪ ʀᴇꜱᴛᴀʀᴛ....`')
     await asyncio.sleep(1)
     await event.edit('`ᴍᴏʜᴏɴ ᴍᴇɴᴜɴɢɢᴜ ʙᴇʙᴇʀᴀᴘᴀ ᴅᴇᴛɪᴋ.`')
     await asyncio.sleep(10)
@@ -126,7 +126,7 @@ async def update(event, repo, ups_rem, ac_br):
     if BOTLOG:
         await event.client.send_message(
             BOTLOG_CHATID, "#pinurun \n"
-            "**ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ᴛᴇʟᴀʜ ᴅɪ ᴘᴇʀʙᴀʀᴜɪ**")
+            "**ᴘɪɴᴜʀᴜɴ ᴛᴇʟᴀʜ ᴅɪ ᴘᴇʀʙᴀʀᴜɪ**")
         await asyncio.sleep(100)
         await event.delete()
 
@@ -188,13 +188,13 @@ async def upstream(event):
 
     if changelog == '' and force_update is False:
         await event.edit(
-            f'\n**✣ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ꜱᴜᴅᴀʜ ᴠᴇʀꜱɪ ᴛᴇʀʙᴀʀᴜ**\n')
+            f'\n**🔥 ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ ꜱᴜᴅᴀʜ ᴠᴇʀꜱɪ ᴛᴇʀʙᴀʀᴜ**\n')
         await asyncio.sleep(15)
         await event.delete()
         return repo.__del__()
 
     if conf is None and force_update is False:
-        changelog_str = f'**✣ ᴘᴇᴍʙᴀʀᴜᴀɴ ᴜɴᴛᴜᴋ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ \n[ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ]:\n\n✣ Pembaruan:**\n`{changelog}`'
+        changelog_str = f'**🔥 ᴘᴇᴍʙᴀʀᴜᴀɴ ᴜɴᴛᴜᴋ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ \n[ᴘɪɴᴜʀᴜɴ]:\n\n✣ Pembaruan:**\n`{changelog}`'
         if len(changelog_str) > 4096:
             await event.edit("`Changelog Terlalu Besar, Lihat File Untuk Melihatnya.`")
             file = open("output.txt", "w+")
@@ -208,7 +208,7 @@ async def upstream(event):
             remove("output.txt")
         else:
             await event.edit(changelog_str)
-        return await event.respond('**ᴘᴇʀɪɴᴛᴀʜ ᴜɴᴛᴜᴋ ᴜᴘᴅᴀᴛᴇ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ**\n >`.update now`\n >`.update deploy`\n\n__ᴜɴᴛᴜᴋ ᴍᴇɴɢ ᴜᴘᴅᴀᴛᴇ ꜰɪᴛᴜʀ ᴛᴇʀʙᴀʀᴜ ᴅᴀʀɪ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ.__')
+        return await event.respond('**ᴘᴇʀɪɴᴛᴀʜ ᴜɴᴛᴜᴋ ᴜᴘᴅᴀᴛᴇ ᴘɪɴᴜʀᴜɴ**\n >`.update now`\n >`.update deploy`\n\n__ᴜɴᴛᴜᴋ ᴍᴇɴɢ ᴜᴘᴅᴀᴛᴇ ꜰɪᴛᴜʀ ᴛᴇʀʙᴀʀᴜ ᴅᴀʀɪ ᴘ ɪ ɴ ᴜ ʀ ᴜ ɴ.__')
 
     if force_update:
         await event.edit(
