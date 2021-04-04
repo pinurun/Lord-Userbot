@@ -18,6 +18,11 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("Shalom, Horas..\tSelamat Siang")
 
+@register(outgoing=True, pattern='^.Ss(?: |$)(.*)')
+async def typewriter(typew):
+    typew.pattern_match.group(1)
+    await typew.edit("Shalom, Horas..\tSelamat Siang")
+
 
 @register(outgoing=True, pattern='^.M(?: |$)(.*)')
 async def typewriter(typew):
