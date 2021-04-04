@@ -151,7 +151,7 @@
     },
     "DEFAULT_BIO": {
       "description": "Default Bio Mu.",
-      "value": "LORD-USERBOT",
+      "value": "LORD - USERBOT",
       "required": false
     },
     "ALIVE_NAME": {
