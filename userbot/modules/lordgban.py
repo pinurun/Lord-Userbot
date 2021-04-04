@@ -1,4 +1,5 @@
-# by:koala @mixiologist
+# Ported By Koala / @ManusiaRakitann From Dark Cobra # Thanks
+# Based On Plugins
 # Lord Userbot
 
 from telethon.events import ChatAction
@@ -212,8 +213,7 @@ async def gunben(userbot):
 
 CMD_HELP.update({
     "gban": "\
-`.gban`\
-\nUsage: Melakukan Banned Secara Global Ke Semua Grup Dimana Lord Sebagai Admin.\
-\n\n`.ungban`\
-\nUsage: Membatalkan Global Banned"
-})
+**Modules:** __Global Banned__\n\n**Perintah:** `.gban`\
+\n**Penjelasan:** Melakukan Banned Secara Global Ke Semua Grup Dimana Lord Sebagai Admin.\
+\n\n**Perintah:** `.ungban`\
+\n**Penjelasan:** Membatalkan Global Banned"})
